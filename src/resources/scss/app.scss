@@ -1,6 +1,14 @@
-@import "variables";
-
+@import 'variables';
 
 h1 {
     color: $red-colo;
+}
+
+.container {
+    margin-top: 41px;
+
+}
+
+.drop-down {
+    margin-left: auto !important;
 }
