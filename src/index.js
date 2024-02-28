@@ -12,7 +12,7 @@ import cors from "cors"
 const app = express();
 
 app.use(methodOverride("_method"))
-const port = 3000;
+const port = 3009;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -47,4 +47,4 @@ connect()
 //route
 route(app);
 
-app.listen(3009);
+app.listen(port);

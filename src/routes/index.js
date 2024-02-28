@@ -8,7 +8,7 @@ function route(app) {
     app.use('/courses', courseRouter)
     app.use('/me', MeRouter)
     app.use('/', siteRouter)
-    app.use('/api/createproduct', ProductRouter)
+    app.use('/api/product', ProductRouter)
 }
 
 export default route

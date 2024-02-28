@@ -1,8 +1,10 @@
 import express from 'express';
-import { CreateProductcontroller } from '../app/controllers/CreateProductcontroller.js';
+import { Productcontroller } from '../app/controllers/Productcontroller.js';
 import { Router } from 'express';
 
 export const ProductRouter = Router();
-ProductRouter.post("/", CreateProductcontroller.create)
-ProductRouter.get("/getProduct", CreateProductcontroller.getALLPoduct)
-ProductRouter.delete("/deleteProduct/:id", CreateProductcontroller.deleteProduct)
+ProductRouter.post("/createProduct", Productcontroller.create)
+ProductRouter.get("/getProduct", Productcontroller.getALLPoduct)
+ProductRouter.put("/updateProduct/:id", Productcontroller.update)
+ProductRouter.delete("/deleteProduct/:id", Productcontroller.deleteProduct)
+ProductRouter.get("/getDetailProduct/:id", Productcontroller.getDetailsProduct)
