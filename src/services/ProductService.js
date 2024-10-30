@@ -12,6 +12,7 @@ export const createProduct = (newProduct) => {
                     status: 'ERR',
                     message: 'The name of product is already'
                 })
+                return;
             }
             const newProduct = await ModelCourse.create({
                 name,
@@ -71,7 +72,7 @@ export const deleteProduct = (id) => {
                 })
             }
 
-            await ModelCourse.findByIdAndDelete(id)
+            await ModelCourse.deleteOne({ _id: id })
             resolve({
                 status: 'OK',
                 message: 'Delete product success',
